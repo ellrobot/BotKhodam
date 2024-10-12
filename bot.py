@@ -61,7 +61,7 @@ async def cek_khodam(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     
     # Admin bebas limit
-    if user.username == "admin_username":  # Ganti dengan username admin
+    if user.username == "dahrcl":  # Ganti dengan username admin
         khodam = random.choice(khodam_list)
         response = f"Hai {user.first_name}, khodammu adalah: {khodam} (tanpa limit)!"
         await update.message.reply_text(response)
@@ -92,7 +92,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Main function to run the bot
 async def main():
     # Buat aplikasi bot
-    application = ApplicationBuilder().token('YOUR_TELEGRAM_BOT_TOKEN').build()
+    application = ApplicationBuilder().token('8039200395:AAG--EHSPVWTvuxYCCj2KhQq6Ac0FxPRxEo').build()
 
     # Daftarkan handler untuk setiap command
     application.add_handler(CommandHandler("start", start))
